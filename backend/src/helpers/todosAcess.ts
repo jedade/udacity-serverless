@@ -63,7 +63,8 @@ export async function updateTodo(todo: TodoItem): Promise<TodoItem> {
         UpdateExpression: 'set attachmentUrl = :attachmentUrl',
         ExpressionAttributeValues: {
             ':attachmentUrl': todo.attachmentUrl
-        }
+        },
+        ReturnValues: 'UPDATED_NEW' 
     }).promise()
     
     return result.Attributes as TodoItem

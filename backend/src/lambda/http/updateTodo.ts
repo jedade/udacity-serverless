@@ -9,6 +9,7 @@ import { UpdateTodoRequest } from '../../requests/UpdateTodoRequest'
 //import { getUserId } from '../utils'
 import { updateTodoItem } from '../../helpers/todosAcess'
 
+
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     const todoId = event.pathParameters.todoId
